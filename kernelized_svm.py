@@ -1,7 +1,7 @@
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVC
-from .utils.generating_dataset import get_train_test_split_data
+from utils.generating_dataset import get_train_test_split_data
 
 from sklearn.metrics import classification_report
 

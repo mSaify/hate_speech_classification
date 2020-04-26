@@ -1,5 +1,5 @@
 
-from .utils.generating_dataset import get_train_test_split_data
+from utils.generating_dataset import get_train_test_split_data
 from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.pipeline import Pipeline
 
@@ -15,7 +15,7 @@ X_train, X_test, y_train, y_test = get_train_test_split_data(1000)
 #model definition
 pipe = Pipeline(
         [('select', SelectFromModel(LogisticRegression(class_weight='balanced',
-                                                  penalty="l1", C=0.01))),
+                                                  penalty="l2", C=0.01))),
         ('model', LogisticRegression(class_weight='balanced'))])
 
 #5 fold split

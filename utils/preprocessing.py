@@ -1,12 +1,6 @@
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.stem.porter import PorterStemmer
-from nltk.corpus import stopwords
-
-stopwords = stopwords.words("english")
-
-
-stemmer = PorterStemmer()
+from .nltk_stopword_download import stopwords, stemmer
 
 
 def preprocess(text_string):
@@ -60,7 +54,7 @@ def tfidf_vector(tweets):
 
 
 
-def truncated_svd(tfidf):
+def truncated_svd(tfidf, size=1000):
     import sklearn.decomposition as skd
 
     def truncated_svd(input, svd_components):
@@ -68,4 +62,4 @@ def truncated_svd(tfidf):
 
         return truncated.fit_transform(input)
 
-    return truncated_svd(tfidf, 1000)
+    return truncated_svd(tfidf, size)

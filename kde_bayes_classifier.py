@@ -2,7 +2,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.neighbors import KernelDensity
 import numpy as np
 from sklearn.model_selection import GridSearchCV
-from .utils.generating_dataset import get_train_test_split_data
+from utils.generating_dataset import get_train_test_split_data
 from sklearn.model_selection import StratifiedKFold
 
 

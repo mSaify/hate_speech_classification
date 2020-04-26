@@ -1,4 +1,4 @@
-from .utils.generating_dataset import get_train_test_split_data
+from utils.generating_dataset import get_train_test_split_data
 from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.pipeline import Pipeline
 

@@ -70,3 +70,8 @@ doing thread off evaluation of feature size and accuracy for couple of algorithm
 
 Test size = 10%
 Kfold split = 5
+
+
+### Report
+
+report.pdf contains the execution report of all the alogrithms executed on google collab.
